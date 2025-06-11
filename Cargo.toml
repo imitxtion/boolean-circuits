@@ -1,0 +1,23 @@
+[package]
+name = "yao_gc_group5"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+curve25519-dalek = { version = "4.1.3", features = ["rand_core", "digest"] }
+rand = "0.8.5"
+rand_core = "0.4"
+num-bigint = "0.4"
+num-traits = "0.2"
+
+
+[dev-dependencies]
+criterion = "0.4"
+
+[[bench]]
+name = "benchmark"
+harness = false
+
+[lib]
+name = "yao_gc_group5"
+path = "src/lib.rs"
